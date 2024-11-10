@@ -5,6 +5,7 @@ body{
 
 /* hero-section styles */
 #hero-section {
+    margin: 0;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -23,7 +24,7 @@ body{
 }
 
 #hero-section h1{
-    font-size: 15vh;
+    font-size: 10vw;
     text-shadow: 
         -2px -2px 0 black, 
          2px -2px 0 black, 
@@ -32,7 +33,7 @@ body{
 }
 
 #hero-section h2{
-    font-size: 7vh;
+    font-size: 4vw;
     text-shadow: 
         -1px -1px 0 black, 
          1px -1px 0 black, 
@@ -46,46 +47,88 @@ h1, h2{
 
 /* Navbar Styles */
 .navbar {
-    background-color: #333;
-    padding: 10px 0 20px;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    padding: 0 10px 0 10px;
+    background-color: #FA753E;
     position: relative; /* Initially relative */
     width: 100%;
     transition: all 0.3s ease;
+    justify-content: right;
 }
 
 .sticky {
+    margin: 0;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 4px 2px -2px gray; /* Add a shadow for effect */
 }
+
 .nav-list {
+    margin: 0;
+    padding-right: 2%;
     list-style-type: none;
     display: flex;
-    justify-content: center;
 }
 
 .nav-item {
-    margin: 0 20px;
+    margin: 0 10px 0 10px;
 }
 
 .nav-item a {
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
     color: white;
     text-decoration: none;
-    font-size: 18px;
-    padding: 5px 10px;
+    font-size: 2vw;
     transition: background-color 0.3s ease;
 }
 
 .nav-item a:hover {
     background-color: #555;
-    border-radius: 5px;
+}
+
+/* Content Styles */
+
+#content{
+    grid-template-columns: repeat(5,1fr);
+    background-color: #FBE8EA;
+    display: grid;
+    /* temp height */
+    height: 100vh; 
+}
+
+/* About Me Section Styles */
+
+.about-me-wrapper, .bang_at_desk{
+    grid-row: 1 / 2;
+}
+
+.about-me-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1 / 5;
+}
+
+.about-me-container{
+    width: 85%;
+    height: 70%;
+    border: 20px solid white;
+    border-radius: 0 0 50px 50px;
+    background-color: white;
 }
 
 
-.test{
+.bang_at_desk{
+    width: 100%;
+    grid-column: 2 / -1;
+}
+
+#test{
+    background-color: #FBE8EA;
     height: 1000vh;
 }
-
