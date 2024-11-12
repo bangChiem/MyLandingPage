@@ -47,6 +47,8 @@ h1, h2{
 
 /* Navbar Styles */
 .navbar {
+    border-top: solid 0.2vw rgb(26, 26, 26);
+    border-bottom: solid 0.2vw rgb(26, 26, 26);
     display: flex;
     align-items: center;
     height: 80px;
@@ -69,13 +71,13 @@ h1, h2{
 
 .nav-list {
     margin: 0;
-    padding-right: 2%;
+    padding-right: 2vw;
     list-style-type: none;
     display: flex;
 }
 
 .nav-item {
-    margin: 0 10px 0 10px;
+    margin: 0 2vw 0 2vw;
 }
 
 .nav-item a {
@@ -92,9 +94,9 @@ h1, h2{
 }
 
 /* Content Styles */
-
 #content{
     grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 1fr 1fr;
     background-color: #FBE8EA;
     display: grid;
     /* temp height */
@@ -102,8 +104,8 @@ h1, h2{
 }
 
 /* About Me Section Styles */
-
 .about-me-wrapper, .bang_at_desk{
+    display: block;
     grid-row: 1 / 2;
 }
 
@@ -115,13 +117,102 @@ h1, h2{
 }
 
 .about-me-container{
+    max-height: 37vw;
+    background-image: url("assets/aboutme_background.png");
+    background-size:cover;
+    display: grid;
+    align-items: stretch; 
+    grid-template-columns: repeat(5,1fr);
     width: 85%;
-    height: 70%;
-    border: 20px solid white;
+    height: 85%;
+    border-top: 1vw solid #0190EF;
     border-radius: 0 0 50px 50px;
     background-color: white;
 }
 
+.about-me-text-container{
+    grid-column: 1 / 5;
+}
+
+.text-highlight-purple{
+    color: #8B4DF7;
+}
+
+.tcnj-even{
+    color: #1f75b1;
+}
+
+.tcnj-odd{
+    color: #FFCF40;
+}
+
+.hobbies p{
+    margin: 0;
+}
+
+.hobbies p:nth-of-type(1) {
+    color: #A774FF; /* Tomato */
+}
+
+.hobbies p:nth-of-type(2) {
+    color: #5A97FF; /* Steel Blue */
+}
+
+.hobbies p:nth-of-type(3) {
+    color: #FFCB2E; /* Lime Green */
+}
+
+.hobbies p:nth-of-type(4) {
+    color: #3CBE35; /* Goldenrod */
+}
+
+.about-me-container h1{
+    color: #1CA4FF;
+    padding: 2% 2% 0 2%;
+    margin: 0;
+    font-size: 7vw;
+    font-weight: 500;
+}
+
+.about-me-container p {
+    font-size: 1.5vw;
+    padding: 0 4vw 0 4vw;
+    font-family: "Fira Code", Arial;
+    font-weight: 200;
+}
+
+
+.bracket{
+    color: #666666;
+}
+
+.tech-stack-container {
+    background-color: #ffffff;
+    border-top: solid 10px #9267ff;
+    border-radius: 0 0 15px 15px;
+    padding: 1vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 60%;
+    margin: 3vw 3vw 3vw 3vw;
+}
+
+.tech-stack-container h2 {
+    font-size: 2vw;
+    color: #9267ff;
+    margin-bottom: 20px;
+}
+
+.tech-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tech-icons img {
+    width: 2vw;
+}
 
 .bang_at_desk{
     width: 100%;
@@ -131,4 +222,8 @@ h1, h2{
 #test{
     background-color: #FBE8EA;
     height: 1000vh;
+}
+
+#giftest{
+    height: 600px;
 }

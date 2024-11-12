@@ -32,7 +32,6 @@ function eraseWriter() {
 // Get the navbar
 const navbar = document.getElementById("navbar");
 
-
 // Get the offset position of the first section
 const section = document.getElementById("hero-section");
 const sticky = section.offsetTop + section.offsetHeight;
@@ -60,4 +59,16 @@ window.onscroll = function() {
     placeholder.style.display = 'none'; // Hide the placeholder
   }
 };
+
+//Alternate TCNJ text color
+const paragraph = document.getElementById("highlight-tcnj");
+const text = paragraph.textContent;
+let styledText = "";
+
+for (let i = 0; i < text.length; i++) {
+  // Wrap each character in a span with a class based on the index (even or odd)
+  styledText += `<span class="${i % 2 === 0 ? 'tcnj-even' : 'tcnj-odd'}">${text[i]}</span>`;
+}
+
+paragraph.innerHTML = styledText;
 
