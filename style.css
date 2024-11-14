@@ -51,8 +51,7 @@ h1, h2{
     border-bottom: solid 0.2vw rgb(26, 26, 26);
     display: flex;
     align-items: center;
-    height: 80px;
-    padding: 0 10px 0 10px;
+    height: 5vw;
     background-color: #FA753E;
     position: relative; /* Initially relative */
     width: 100%;
@@ -78,6 +77,7 @@ h1, h2{
 
 .nav-item {
     margin: 0 2vw 0 2vw;
+    transition: transform 0.3s ease;
 }
 
 .nav-item a {
@@ -86,21 +86,20 @@ h1, h2{
     color: white;
     text-decoration: none;
     font-size: 2vw;
-    transition: background-color 0.3s ease;
 }
 
-.nav-item a:hover {
-    background-color: #555;
+.nav-item:hover {
+    transform: scale(1.2);
 }
 
 /* Content Styles */
 #content{
     grid-template-columns: repeat(5,1fr);
-    grid-template-rows: repeat(5,1fr);
+    grid-template-rows: repeat(10,1fr);
     background-color: #FBE8EA;
     display: grid;
     /* temp height */
-    height: 300vh; 
+    height: 500vh; 
 }
 
 /* About Me Section Styles */
@@ -110,9 +109,8 @@ h1, h2{
 }
 
 .about-me-wrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 4vw;
+    margin-left: 4vw;
     grid-column: 1 / 5;
     grid-row: 1 / 2;
 }
@@ -121,6 +119,7 @@ h1, h2{
     max-height: 37vw;
     background-image: url("assets/aboutme_background.png");
     display: grid;
+    background-size: contain;
     background-position-x: right;
     background-repeat: repeat-y;
     align-items: stretch; 
@@ -214,7 +213,7 @@ h1, h2{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 1vw;
 }
 
 .tech-icons img {
@@ -240,7 +239,7 @@ h1, h2{
 }
 
 .projects-container{
-    grid-row: 2 / 6;
+    grid-row: 2 / 3;
     grid-column: 1 / 6;
     background-image: url("assets/projects_background.png");
     background-repeat: repeat-y;
@@ -248,12 +247,12 @@ h1, h2{
     background-size: contain;
     align-items: center;
     justify-self: center;
-    height: 96.5%;
+    height: 99%;
     width: 85%;
     margin-top: 2.5%;
     background-color: rgb(251, 250, 250);
     border-top: 1vw solid #16B80E;
-    border-radius: 0 0 50px 50px;
+    border-radius: 0 0 3vw 3vw;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -263,12 +262,137 @@ h1, h2{
     margin-top: 1vw;
     height: 90%;
     width: 75%;
+    padding: 3vw;
     background-color: white;
+    border-radius: 3vw;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* GENERRIC NESTED PROJECTS STYLE*/
+.nested_projects_container{
+    border-left: 0.4vw solid;
+    padding: 1vw;
+    box-shadow: 
+    0 -4px 6px -2px rgba(0, 0, 0, 0.1), 
+    4px 0 6px -2px rgba(0, 0, 0, 0.1),  
+    0 4px 6px -2px rgba(0, 0, 0, 0.1);
+    border-radius: 0 5vw 5vw 0;
+    margin-bottom: 3vw;
 }
 
 .projects-container h2{
     font-size: 2vw;
+    font-weight: 200;
     color: black;
+    margin-bottom: 1vw;
 }
 
+/* GENERIC BUTTON STYLE */
+.buttons-container{
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+}
+
+.button-link {
+    text-decoration: none; /* Remove underline from link */
+  }
+
+.projects-container button {
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    border-radius: 1vw;
+    width: fit-content;
+    margin-bottom: 1vw;
+    padding-right: 1vw;
+    transition: transform 0.3s ease;
+    font-size: 1vw;
+}
+
+.projects-container button:hover{
+    transform: scale(1.05);
+}
+  
+
+/* VIEW WEBSITE BUTTON */
+.view-full-website-button {
+    border: #666666 solid 0.2vw;
+    background-color: white;
+}
+  
+.view-full-website-button-icon {
+    width: 3vw;
+    padding-left: 1vw;
+}
+  
+.view-full-website-button:hover {
+    border-color: #0190EF;
+    color: #0190EF;
+}
+
+/* GITHUB BUTTON */
+.github-button{
+    padding: 0;
+    border: #666666 solid 0.2vw;
+    background-color: white;
+}
+
+.github-button:hover{
+    border-color: #A774FF;
+}
+
+
+.projects-container h2 span{
+    font-weight: 100;
+}
+
+.nested_projects_container iframe{
+    width: 95%;
+    height: 30vw;
+    border: none;
+}
+
+.nested-projects-container-image-container img{
+    display: block;
+    width: 100%; 
+    height: auto;
+}
+
+.nested-projects-container-image-container{
+    width: 95%; /* Set your desired width */
+    height: 30vw; /* Set your fixed height */
+    overflow-y: scroll; /* Allow vertical scrolling */
+    overflow-x: hidden; /* Hide horizontal overflow if needed */
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+/* HANGOUTS SPECIFIC PROJECT SPECIFIC PROJECT STYLE CONTAINER */
+.hangouts{
+    border-color: #FFCB2E;
+}
+
+.hangouts h2{
+    color: #ffc004;
+}
+
+/* VSA SPECIFIC PROJECT SPECIFIC PROJECT STYLE CONTAINER */
+.vsa{
+    border-color: #D02406;
+}
+
+.vsa h2{
+    color: #D02406;
+}
+
+/* NEAT STREET PROJECT SPECIFIC PROJECT STYLE CONTAINER */
+.neat-street{
+    border-color: rgb(81, 120, 21);
+}
+
+.neat-street h2{
+    color: rgb(81, 120, 21);
+}
