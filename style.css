@@ -53,7 +53,7 @@ h1, h2{
     align-items: center;
     height: 5vw;
     background-color: #FA753E;
-    position: relative; /* Initially relative */
+    position: relative; 
     width: 100%;
     transition: all 0.3s ease;
     justify-content: right;
@@ -153,19 +153,19 @@ h1, h2{
 }
 
 .hobbies p:nth-of-type(1) {
-    color: #A774FF; /* Tomato */
+    color: #A774FF;
 }
 
 .hobbies p:nth-of-type(2) {
-    color: #5A97FF; /* Steel Blue */
+    color: #5A97FF; 
 }
 
 .hobbies p:nth-of-type(3) {
-    color: #FFCB2E; /* Lime Green */
+    color: #FFCB2E;
 }
 
 .hobbies p:nth-of-type(4) {
-    color: #3CBE35; /* Goldenrod */
+    color: #3CBE35;
 }
 
 #content h1{
@@ -350,9 +350,9 @@ h1, h2{
 }
 
 .nested_projects_container iframe{
-    width: 95%;
+    width: 97%;
     height: 30vw;
-    border: none;
+    border: 0.2vw solid rgb(177, 177, 177);   
 }
 
 .nested-projects-container-image-container img{
@@ -362,10 +362,10 @@ h1, h2{
 }
 
 .nested-projects-container-image-container{
-    width: 95%; /* Set your desired width */
-    height: 30vw; /* Set your fixed height */
-    overflow-y: scroll; /* Allow vertical scrolling */
-    overflow-x: hidden; /* Hide horizontal overflow if needed */
+    width: 95%; 
+    height: 30vw; 
+    overflow-y: scroll; 
+    overflow-x: hidden; 
     border: 2px solid #ccc;
     border-radius: 8px;
 }
@@ -395,4 +395,21 @@ h1, h2{
 
 .neat-street h2{
     color: rgb(81, 120, 21);
+}
+
+.neat-street .nested-projects-container-image-container{
+    display: flex;
+    gap: 2.5vw;
+    border: none;
+}
+
+/* CONTACT ME SECTION */
+
+#contact-section{
+    width: 85%;
+    align-items: center;
+    justify-self: center;
+    grid-column: 1 / -1;
+    grid-row: 4 / -2;
+    background-color: #0190EF;
 }
