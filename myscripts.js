@@ -72,3 +72,18 @@ for (let i = 0; i < text.length; i++) {
 
 paragraph.innerHTML = styledText;
 
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+          const container = entry.target;
+          if (entry.isIntersecting) {
+              container.classList.add('slide-in');
+              observer.unobserve(container); // Stop observing once the animation is done
+          }
+      });
+  });
+
+  const container = document.getElementById('animatedContainer');
+  observer.observe(container);
+});
+
