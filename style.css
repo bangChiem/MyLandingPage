@@ -256,7 +256,7 @@ nav ul {
 
 .tech-stack-container {
     background-color: #ffffff;
-    border-top: solid 10px #9267ff;
+    border-top: solid 1vw #9267ff;
     border-radius: 0 0 15px 15px;
     padding: 1vw;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -269,7 +269,7 @@ nav ul {
 .tech-stack-container h2 {
     font-size: 2vw;
     color: #9267ff;
-    margin-bottom: 20px;
+    margin-bottom: 1vw;
 }
 
 .tech-icons {
