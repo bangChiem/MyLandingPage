@@ -24,10 +24,17 @@
 
     <!-- NAVBAR -->
     <nav class="navbar" id="navbar">
+        <ul class="sidebar nav-list">
+            <li class="nav-item" onclick="closeSidebar()"><img class="close-icon" src="assets/close.png"></li>
+            <li class="nav-item" onclick="closeSidebar()"><a href="#content">About Me</a></li>
+            <li class="nav-item" onclick="closeSidebar()"><a href="#projects-container">Projects</a></li>
+            <li class="nav-item" onclick="closeSidebar()"><a href="#contact-section">Contact Me</a></li>
+        </ul>
         <ul class="nav-list">
-            <li class="nav-item"><a href="#content">About Me</a></li>
-            <li class="nav-item"><a href="#projects-container">Projects</a></li>
-            <li class="nav-item"><a href="#contact-section">Contact Me</a></li>
+            <li class="hide-on-mobile nav-item"><a href="#content">About Me</a></li>
+            <li class="hide-on-mobile nav-item"><a href="#projects-container">Projects</a></li>
+            <li class="hide-on-mobile nav-item"><a href="#contact-section">Contact Me</a></li>
+            <li class="hide-on-desktop" onclick="showSidebar()"><img src="assets/menu.png" class="menu-icon"></li>
         </ul>
     </nav>
 

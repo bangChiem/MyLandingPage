@@ -70,20 +70,14 @@ for (let i = 0; i < text.length; i++) {
   styledText += `<span class="${i % 2 === 0 ? 'tcnj-even' : 'tcnj-odd'}">${text[i]}</span>`;
 }
 
-paragraph.innerHTML = styledText;
+function showSidebar() {
+  const sidebar = document.querySelector('.sidebar')
+  sidebar.style.display = 'flex'
+}
 
-document.addEventListener("DOMContentLoaded", () => {
-  const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-          const container = entry.target;
-          if (entry.isIntersecting) {
-              container.classList.add('slide-in');
-              observer.unobserve(container); // Stop observing once the animation is done
-          }
-      });
-  });
+function closeSidebar() {
+  const sidebar = document.querySelector('.sidebar')
+  sidebar.style.display = 'none'
+}
 
-  const container = document.getElementById('animatedContainer');
-  observer.observe(container);
-});
 
