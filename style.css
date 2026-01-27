@@ -481,8 +481,8 @@ nav ul {
 }
 
 .nested_projects_container iframe{
-    height: 30vw;
     width: 60vw;
+    height: 30vw;
     border: 0.2vw solid rgb(177, 177, 177);   
 }
 
